@@ -2,7 +2,7 @@
 
 An interactive Streamlit dashboard for exploring Detroit City FC event usage by player, body part, result, and pressure range.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://blank-app-template.streamlit.app/)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dcfc-foot-useage.streamlit.app/)
 
 ### Run locally
 
