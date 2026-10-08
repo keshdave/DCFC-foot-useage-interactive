@@ -2,7 +2,7 @@
 
 An interactive Streamlit dashboard for comparing Detroit City FC players by body-part usage, event result, pressure, and distance to the opponent.
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dcfc-foot-useage.streamlit.app/)
+[![Access The App Here!](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dcfc-foot-useage.streamlit.app/)
 
 ------------------------------------------------
 
