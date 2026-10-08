@@ -4,6 +4,8 @@ An interactive Streamlit dashboard for comparing Detroit City FC players by body
 
 [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dcfc-foot-useage.streamlit.app/)
 
+------------------------------------------------
+
 ### Dashboard features
 
 - Compare two players using separate bar charts shown side by side.
@@ -21,6 +23,8 @@ An interactive Streamlit dashboard for comparing Detroit City FC players by body
 - Hover over any bar segment to see the result count out of the body-part total, such as `success: 10/30`, along with its percentage.
 
 Both player charts use the same pressure and distance filters, making their results easier to compare.
+
+-------------------------------------------
 
 ### Run locally
 Prerequisite: install `uv` if you don't already have it.
