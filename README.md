@@ -27,26 +27,11 @@ Both player charts use the same pressure and distance filters, making their resu
 -------------------------------------------
 
 ### Run locally
-Prerequisite: install `uv` if you don't already have it.
-
-```
-$ curl -LsSf https://astral.sh/uv/install.sh | sh
-```
-
-1. Sync the dependencies:
-
-   ```
-   $ uv sync
-   ```
-
-2. Run the app
-
-   ```
-   $ uv run streamlit run streamlit_app.py
-   ```
-If you are using a regular Python environment instead of `uv`, install the dependencies first:
+Install the dependencies from `requirements.txt`, then run the app:
 
 ```
 $ python -m pip install -r requirements.txt
 $ streamlit run streamlit_app.py
 ```
+
+Streamlit Cloud reads `requirements.txt` from the repository root and installs the required `streamlit`, `pandas`, and `plotly` packages automatically.
