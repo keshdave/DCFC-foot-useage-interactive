@@ -7,8 +7,7 @@ COLORS = {
     "SUCCESS": "#17824b",
     "FAIL": "#d64b4b",
     "NEUTRAL": "#e2a93b",
-    "NO RESULT": "#9aa3ad",
-}
+    "NO RESULT": "#9aa3ad",}
 BODY_PART_ORDER = ["FOOT_RIGHT", "FOOT_LEFT", "BODY", "UNKNOWN"]
 DISTANCE_ORDER = [
     "LESS_THAN_ONE_METER",
@@ -16,8 +15,7 @@ DISTANCE_ORDER = [
     "TWO_METERS",
     "THREE_METERS",
     "FOUR_METERS",
-    "MORE_THAN_FOUR_METERS",
-]
+    "MORE_THAN_FOUR_METERS",]
 
 def readable(value):
     return str(value).replace("_", " ").lower()
@@ -51,15 +49,12 @@ def make_chart(events, player):
         color_discrete_map={readable(result): COLORS.get(result, "#64748b") for result in results},
         custom_data=["total", "percentage", "result_name"],
         labels={"body_part": "Body part", "events": "Events", "result_name": "Result"},
-        title=f"{player}: usage by body part",
-    )
+        title=f"{player}: usage by body part",)
     chart.update_traces(
         hovertemplate=(
             "<b>%{x}</b><br>"
             "%{customdata[2]}: %{y}/%{customdata[0]}<br>"
-            "Share: %{customdata[1]:.1f}%<extra></extra>"
-        )
-    )
+            "Share: %{customdata[1]:.1f}%<extra></extra>"))
     chart.update_layout(barmode="stack", hovermode="closest", margin={"l": 20, "r": 20, "t": 70, "b": 20})
     return chart
 
@@ -96,8 +91,7 @@ def main():
         pressure = st.slider("Pressure range", 0.0, 100.0, (0.0, 100.0), 1.0)
         distances = ["All distances"] + DISTANCE_ORDER
         distance = st.selectbox(
-            "Distance to opponent", distances, format_func=readable, key="distance_filter"
-        )
+            "Distance to opponent", distances, format_func=readable, key="distance_filter")
         include_missing = st.checkbox("Include missing pressure", False)
     left, right = st.columns(2)
     with left:
@@ -105,8 +99,7 @@ def main():
         show_player(data, player_one, pressure, distance, include_missing)
     with right:
         player_two = st.selectbox(
-            "Second player", players, index=min(1, len(players) - 1), key="player_two"
-        )
+            "Second player", players, index=min(1, len(players) - 1), key="player_two")
         show_player(data, player_two, pressure, distance, include_missing)
 
 if __name__ == "__main__":
