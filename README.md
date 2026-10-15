@@ -8,7 +8,7 @@ An interactive Streamlit dashboard for comparing Detroit City FC players by body
 
 ### Dashboard features
 
-- Compare two players using separate bar charts shown side by side.
+- Start with one player, or enable the comparison option to view two players in separate columns.
 - Use the shared `Pressure range` slider to filter events from 0 to 100.
 - Use the `Distance to opponent` filter to choose all distances or a specific distance category:
    - Less than one meter
@@ -20,6 +20,7 @@ An interactive Streamlit dashboard for comparing Detroit City FC players by body
 - Include events with missing pressure values when needed.
 - View events, successes, and success rate for each selected player.
 - Compare stacked results by body part, ordered as foot right, foot left, body, and unknown.
+- View separate pie charts showing action types for each body part.
 - Hover over any bar segment to see the result count out of the body-part total, such as `success: 10/30`, along with its percentage.
 
 Both player charts use the same pressure and distance filters, making their results easier to compare.
