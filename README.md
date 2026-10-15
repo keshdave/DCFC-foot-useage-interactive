@@ -1,4 +1,4 @@
-# Detroit City FC player comparison
+# Detroit City FC Foot Usage (with player comparison)
 
 An interactive Streamlit dashboard for comparing Detroit City FC players by body-part usage, event result, pressure, and distance to the opponent.
 
