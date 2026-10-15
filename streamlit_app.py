@@ -1,5 +1,4 @@
 from pathlib import Path
-
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -54,6 +53,13 @@ def make_result_chart(events, player):
             "<b>%{x}</b><br>"
             "%{customdata[2]}: %{y}/%{customdata[0]}<br>"
             "Share: %{customdata[1]:.1f}%<extra></extra>"))
+    totals = events["body_part_extended"].value_counts()
+    successes = events[events["result"].eq("SUCCESS")]["body_part_extended"].value_counts()
+    success_rates = successes.reindex(totals.index, fill_value=0).div(totals).mul(100)
+    for part, rate in success_rates.items():
+        chart.add_annotation(
+            x=readable(part), y=totals[part], text=f"success: {rate:.1f}%",
+            showarrow=False, yshift=10, font={"size": 11, "color": COLORS["SUCCESS"]})
     chart.update_layout(barmode="stack", hovermode="closest", margin={"l": 20, "r": 20, "t": 70, "b": 20})
     return chart
 
