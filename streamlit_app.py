@@ -131,7 +131,7 @@ def main():
     st.caption("Compare body-part usage under the same pressure filters.")
     with st.sidebar:
         st.header("Filters")
-        pressure = st.slider("Pressure range", 0.0, 100.0, (0.0, 100.0), 1.0)
+        pressure = st.slider("Pressure range", 0.0, 100.0, (0.0, 100.0), 5.0)
         distance = st.selectbox(
             "Distance to opponent",
             ["All distances"] + DISTANCES,
